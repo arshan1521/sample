@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Angular - The framework for building scalable web apps</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #17171a;
+      color: #fff;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+      width: 80px;
+      background: #232033;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-right: 2px solid #181626;
+      padding: 2rem 0;
+      z-index: 100;
+    }
+    .sidebar .logo {
+      margin-bottom: 3rem;
+      width: 52px;
+      height: 52px;
+    }
+    .sidebar nav {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2.2rem;
+      align-items: center;
+    }
+    .sidebar a {
+      color: #e35be7;
+      text-decoration: none;
+      font-size: 1.4rem;
+      transition: color 0.2s;
+    }
+    .sidebar a:hover {
+      color: #fff;
+    }
+    .header {
+      text-align: center;
+      padding: 3.5rem 2vw 2rem 2vw;
+      background: linear-gradient(180deg, #16141d 85%, rgba(227,91,231,0.05));
+    }
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+    }
+    .main-logo {
+      width: 60px;
+      height: 60px;
+      margin-right: 1.1rem;
+    }
+    .header-title {
+      font-size: 2.6rem;
+      color: #e35be7;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .header-desc {
+      color: #b8b6d3;
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .get-started-btn {
+      background: #e35be7;
+      color: #160a2a;
+      border: none;
+      padding: 1rem 2.2rem;
+      border-radius: 58px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.18s;
+    }
+    .get-started-btn:hover {
+      background: #ad1ea8;
+      color: #fff;
+    }
+    .features, .performance, .learn-more {
+      max-width: 1100px;
+      margin: 2rem auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .feature, .learn-box {
+      background: #2b2037;
+      border-radius: 12px;
+      padding: 2rem;
+      flex: 1 1 200px;
+      min-width: 210px;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 0 10px 0 #44085433;
+    }
+    .feature-icon, .learn-icon {
+      font-size: 2rem;
+      color: #e467fc;
+      margin-bottom: 0.7rem;
+    }
+    h2 {
+      text-align: center;
+      margin-top: 3rem;
+      color: #fff;
+    }
+    .footer {
+      background: #1a1a1e;
+      color: #aaa;
+      padding: 2rem 0 1rem;
+      font-size: 0.95rem;
+      text-align: left;
+    }
+    .footer-columns {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .footer-col {
+      flex: 1 1 180px;
+    }
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-col ul li {
+      margin-bottom: 0.4rem;
+    }
+    .footer-col ul li a {
+      color: #e467fc;
+      text-decoration: none;
+      transition: text-decoration 0.2s;
+    }
+    .footer-col ul li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <aside class="sidebar">
+    <img src="angular.svg" alt="Angular Logo Sidebar" class="logo">
+    <nav>
+      <a href="#" title="Docs">&#128196;</a>
+      <a href="#" title="Tutorial">&#127891;</a>
+      <a href="#" title="API">&#128279;</a>
+      <a href="#" title="Resources">&#128736;</a>
+      <a href="#" title="GitHub">&#128187;</a>
+    </nav>
+  </aside>
+
+  <header class="header">
+      <div class="logo-row">
+        <img src="angular.svg" alt="Angular Logo" class="main-logo">
+        <span class="header-title">Angular</span>
+      </div>
+      <div class="header-desc">
+    <div class="subtitle">The framework for building scalable web apps with confidence</div><br>
+    <button class="get-started-btn">Get Started</button>
+  </header>
+
+  <h2>Productivity meets scalability</h2>
+  <section class="features">
+    <div class="feature">
+      <div class="feature-icon">🤖</div>
+      <h3>AI-forward</h3>
+      <p>Resources and integrations to supercharge your development with AI.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">♻️</div>
+      <h3>Opinionated &amp; Versatile</h3>
+      <p>Organized yet modular thanks to Angular components and dependency injection.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">⚡</div>
+      <h3>Reactive</h3>
+      <p>Fast state updates with fine-grained reactivity based on Angular Signals.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">∞</div>
+      <h3>Fully featured</h3>
+      <p>First-party modules for forms, routing, and more.</p>
+    </div>
+  </section>
+
+  <h2>When performance matters</h2>
+  <section class="performance features">
+    <div class="feature">
+      <h3>Reactively with signals</h3>
+      <p>Manage state at scale, breeze through large loads.</p>
+    </div>
+    <div class="feature">
+      <h3>Performance targets</h3>
+      <p>Meet your performance targets with next-generation deferred loading and rendering strategies.</p>
+    </div>
+    <div class="feature">
+      <h3>Fast &amp; reliable</h3>
+      <p>Trusted by millions to build fast, reliable applications that scale.</p>
+    </div>
+  </section>
+
+  <h2>Want to learn more?</h2>
+  <section class="learn-more">
+    <div class="learn-box">
+      <div class="learn-icon">🚀</div>
+      <h3>New to Angular?</h3>
+      <p>Try our in-browser tutorial lessons designed for hands-on experience with Angular.<br><i>Recommended for developers new to Angular looking to dive right into code.</i></p>
+    </div>
+    <div class="learn-box">
+      <div class="learn-icon">📑</div>
+      <h3>More of a reader?</h3>
+      <p>Guides to help you understand Angular fundamentals rapidly.<br><i>For developers with framework experience, but want a quick overview.</i></p>
+    </div>
+    <div class="learn-box">
+      <div class="learn-icon">💡</div>
+      <h3>Why Angular?</h3>
+      <p>Learn about Angular, its benefits, and if it's right for you.<br><i>For developers seeking to know more about the Angular framework.</i></p>
+    </div>
+    <div class="learn-box">
+      <div class="learn-icon">🤔</div>
+      <h3>Are you an LLM or curious about AI?</h3>
+      <p>Find prompts, strategies, and more for getting the most out of Angular and AI.<br><i>For robots... and developers wanting to get the most out of Angular and AI.</i></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>Social Media</h4>
+        <ul>
+          <li><a href="#">Twitter (X)</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">StackOverflow</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="#">Code of Conduct</a></li>
+          <li><a href="#">Angular Discord</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Press Kit</a></li>
+          <li><a href="#">Roadmap</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Languages</h4>
+        <ul>
+          <li>English</li>
+          <li>日本語</li>
+          <li>中文</li>
+        </ul>
+      </div>
+      &copy; 2025 Angular. Mocked for study purposes - layout inspired by angular.io.
+    </div>
+  </footer>
+</body>
+</html>
